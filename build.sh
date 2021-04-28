@@ -2,7 +2,7 @@
 # Build script
 set -eo pipefail
 build_tag=$1
-name=kendra-service
+name=ml-core-service
 node=$2
 org=$3
 docker build -f ./Dockerfile --label commitHash=$(git rev-parse --short HEAD) -t ${org}/${name}:${build_tag} .
